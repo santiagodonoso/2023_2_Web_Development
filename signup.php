@@ -10,7 +10,7 @@ if( ! isset($_POST["name"])){
 // trim it... remove empty left and right spaces
 $_POST["name"] = trim($_POST["name"]);
 
-if( ! preg_match("/^[a-zA-Z]{2,20}$/", $_POST["name"]) ){
+if( ! preg_match("/^[a-zA-Zæøå]{2,20}$/", $_POST["name"]) ){
   http_response_code(400);
   echo json_encode(["error" => "name is invalid"]);  
   exit();
@@ -24,17 +24,17 @@ if( ! isset($_POST["last_name"])){
   exit();
 }
 $_POST["last_name"] = trim($_POST["last_name"]);
+if( ! preg_match("/^[a-zA-Zæøå]{2,20}$/", $_POST["last_name"]) ){
+  http_response_code(400);
+  echo json_encode(["error" => "last_name is invalid"]);  
+  exit();
+}
 
-if( strlen(  $_POST["last_name"]  ) < 2 ){
-  http_response_code(400);
-  echo json_encode(["error" => "last_name min 2 characters"]);
-  exit();
-}
-if( strlen(  $_POST["last_name"]  ) > 20 ){
-  http_response_code(400);
-  echo json_encode(["error" => "last_name max 20 characters"]);
-  exit();
-}
+
+
+
+
+
 
 // Age min 18 max 100
 if( ! isset($_POST["age"])){
