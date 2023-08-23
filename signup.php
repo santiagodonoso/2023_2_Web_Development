@@ -47,24 +47,30 @@ if( ! isset($_POST["age"])){
   exit();
 }
 $_POST["age"] = trim($_POST["age"]);
-// Make sure that the age contains only numbers
-if( ! ctype_digit($_POST["age"]) ){
-  http_response_code(400);
-  echo json_encode(["error" => "age only numbers"]);
-  exit();
-}
-$_POST["age"] = (int)$_POST["age"];
 
-if( $_POST["age"] < 18 ){ // 18
-  http_response_code(400);
-  echo json_encode(["error" => "age min 18"]);
-  exit();
-}
-if( $_POST["age"] > 100 ){
-  http_response_code(400);
-  echo json_encode(["error" => "age max 100"]);
-  exit();
-}
+
+
+
+
+
+// Make sure that the age contains only numbers
+// if( ! ctype_digit($_POST["age"]) ){
+//   http_response_code(400);
+//   echo json_encode(["error" => "age only numbers"]);
+//   exit();
+// }
+// $_POST["age"] = (int)$_POST["age"];
+
+// if( $_POST["age"] < 18 ){ // 18
+//   http_response_code(400);
+//   echo json_encode(["error" => "age min 18"]);
+//   exit();
+// }
+// if( $_POST["age"] > 100 ){
+//   http_response_code(400);
+//   echo json_encode(["error" => "age max 100"]);
+//   exit();
+// }
 
 
 // Connect to the database
