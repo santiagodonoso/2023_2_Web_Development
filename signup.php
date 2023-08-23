@@ -1,11 +1,6 @@
 <?php 
 // Validate
-// Check that the input name exists
-// $_POST
-// {"error":"name is missing"} 
-// {"error":"name min 2 characters"} 
-// {"error":"name max 20 characters"} 
-
+// ini_set("display_errors", 1);
 
 if( ! isset($_POST["name"])){
   http_response_code(400);
@@ -70,8 +65,6 @@ if( $_POST["age"] > 100 ){
   echo json_encode(["error" => "age max 100"]);
   exit();
 }
-
-
 
 
 // Connect to the database
