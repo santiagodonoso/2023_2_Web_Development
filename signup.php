@@ -47,7 +47,10 @@ if( ! isset($_POST["age"])){
   exit();
 }
 $_POST["age"] = trim($_POST["age"]);
-
+if( ! preg_match( "/[0-9]/",  $_POST["age"] ) ){
+  echo "no";
+  exit();
+}
 
 
 
