@@ -2,6 +2,8 @@
 // Validate
 // ini_set("display_errors", 1);
 
+
+
 if( ! isset($_POST["name"])){
   http_response_code(400);
   echo json_encode(["error" => "name is missing"]);
@@ -29,11 +31,6 @@ if( ! preg_match("/^[a-zA-Zæøå]{2,20}$/", $_POST["last_name"]) ){
   echo json_encode(["error" => "last_name is invalid"]);  
   exit();
 }
-
-
-
-
-
 
 
 // Age min 18 max 100
