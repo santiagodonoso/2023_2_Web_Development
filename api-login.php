@@ -9,7 +9,6 @@ try{
   // TODO: validate user last name
   _validate_last_name();
 
-
   $message = [
     'info' => 'You are logged in',
     'name' => $_POST['name'],
