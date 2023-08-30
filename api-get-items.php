@@ -13,7 +13,7 @@ try{
 
   foreach($items as $item){
     if( $item['color'] == $_GET['item-color'] ){
-      
+      $data[] = $item;
     }
   }
 
