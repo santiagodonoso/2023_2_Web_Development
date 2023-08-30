@@ -4,12 +4,21 @@ try{
 
   // Connect to the database
   $items = [
-    ['item_id'=>1, 'item_name'=>'A'],
-    ['item_id'=>2, 'item_name'=>'B'],
-    ['item_id'=>3, 'item_name'=>'C'],
+    ['item_id'=>1, 'item_name'=>'A', 'color'=>'blue'],
+    ['item_id'=>2, 'item_name'=>'B', 'color'=>'red'],
+    ['item_id'=>3, 'item_name'=>'C', 'color'=>'blue'],
   ];
 
-  echo json_encode($items);
+  $data = [];
+
+  foreach($items as $item){
+    if( $item['color'] == $_GET['item-color'] ){
+      
+    }
+  }
+
+
+  echo json_encode($data);
 
 }catch(Exception $e){
   http_response_code(400);
