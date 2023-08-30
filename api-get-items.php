@@ -11,13 +11,20 @@ try{
 
   $data = [];
 
-  
-  foreach($items as $item){
-    if( $item['color'] == $_GET['item-color'] && 
-        $item['price'] >= $_GET['item-min-price'] ){
-      $data[] = $item;
-    }
+  // Only do the loop if both vars in the query string exist
+  if( isset($_GET['item-color']) && 
+      isset($_GET['item-min-price']) ){
+        
+    foreach($items as $item){
+      if( $item['color'] == $_GET['item-color'] && 
+          $item['price'] >= $_GET['item-min-price'] ){
+        $data[] = $item;
+      }
+    }    
   }
+
+
+
 
 
   echo json_encode($data);
