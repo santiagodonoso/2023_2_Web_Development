@@ -1,10 +1,10 @@
 <?php
-$the_title = 'Items';
+$the_title = 'Users';
 require_once __DIR__ . '/header.php';
 ?>
 
 <h1>
-  Items
+  Users
 </h1>
 
 <?php
