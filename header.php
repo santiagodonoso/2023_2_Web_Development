@@ -17,9 +17,12 @@ require_once __DIR__ . '/_.php';
 
   <nav class="flex w-full h-8 bg-sky-600 items-center gap-4 px-4">
     <a href="/">Home</a>
-    <a href="/items">Items</a>
-    <a href="/users">Users</a>
-    <a href="/login" class="ml-auto">Login</a>
+    <a href="/items" class="hidden sm:block">Items</a>
+    <a href="/users" class="hidden sm:block">Users</a>
+    <input type="text" class="mx-auto">
+    <a href="/signup" class="">Signup</a>
+    <a href="/login" class="">Login</a>
+    <button>X</button>
   </nav>
 
 
