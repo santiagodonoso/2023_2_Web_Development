@@ -11,6 +11,7 @@ try{
 
   $data = [];
 
+  
   foreach($items as $item){
     if( $item['color'] == $_GET['item-color'] && 
         $item['price'] >= $_GET['item-min-price'] ){
