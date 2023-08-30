@@ -2,6 +2,7 @@
 
 
 define('ITEM_NAME_MIN_LEN', 2);
+define('ITEM_NAME_MAX_LEN', 20);
 
 function _validate_item_name(){
   if(!isset($_POST['item_name'])){
@@ -15,8 +16,8 @@ function _validate_item_name(){
     exit();    
   }
 
-  if( strlen($_POST['item_name']) < ITEM_NAME_MIN_LEN){
-    throw new Exception('item_name min '.ITEM_NAME_MIN_LEN.' characters');
+  if( strlen($_POST['item_name']) > ITEM_NAME_MAX_LEN){
+    throw new Exception('item_name max '.ITEM_NAME_MAX_LEN.' characters');
     exit();    
   }  
 }
