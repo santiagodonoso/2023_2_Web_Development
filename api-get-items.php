@@ -1,4 +1,5 @@
 <?php
+// 127.0.0.1/api-get-items.php?item-color=blue&item-min-price=25
 
 try{
 
@@ -14,20 +15,48 @@ try{
   // Only do the loop if both vars in the query string exist
   if( isset($_GET['item-color']) && 
       isset($_GET['item-min-price']) ){
-        
+
     foreach($items as $item){
       if( $item['color'] == $_GET['item-color'] && 
           $item['price'] >= $_GET['item-min-price'] ){
         $data[] = $item;
       }
     }    
+  }else{
+    $data = $items;
   }
 
-
-
-
-
   echo json_encode($data);
+
+
+  /*
+  if( isset($_GET['item-color']) && 
+      isset($_GET['item-min-price']) ){
+
+    foreach($items as $item){
+      if( $item['color'] == $_GET['item-color'] && 
+          $item['price'] >= $_GET['item-min-price'] ){
+        $data[] = $item;
+      }
+    }    
+    echo json_encode($data);
+    exit();
+  }
+
+  echo json_encode($items);
+  */
+
+
+
+
+
+
+
+
+
+
+
+
 
 }catch(Exception $e){
   http_response_code(400);
