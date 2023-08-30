@@ -1,7 +1,7 @@
 <?php
 
 
-define('ITEM_NAME_MIN_LEN', 2);
+define('ITEM_NAME_MIN_LEN', 5);
 define('ITEM_NAME_MAX_LEN', 20);
 
 function _validate_item_name(){
