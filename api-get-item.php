@@ -7,7 +7,16 @@ $items = [
 ];
 
 try{
-  echo "Searching for item {$_GET['item-id']}";
+  foreach($items as $item){
+    if( $item['item_id'] == $_GET['item-id'] ){
+      echo json_encode($item);
+      exit();
+    }
+  }
+
+
+
+
 }catch(Exception $e){
   http_response_code(400);
   echo json_encode(['info'=>'ups...']);
