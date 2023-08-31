@@ -1,7 +1,7 @@
 <?php
 $title = 'One';
 $active_link = 'one';
-require_once __DIR__ . '/header.php';
+require_once __DIR__ . '/components/header.php';
 ?>
 
 <h1>
@@ -9,5 +9,5 @@ require_once __DIR__ . '/header.php';
 </h1>
 
 <?php
-require_once __DIR__ . '/footer.php';
+require_once __DIR__ . '/components/footer.php';
 ?>
