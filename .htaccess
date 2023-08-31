@@ -1,6 +1,6 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
+# RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
 # Take the user to the index page
 RewriteRule ^$                  /views/index.php 
@@ -8,5 +8,9 @@ RewriteRule ^one.php$           /views/one.php
 RewriteRule ^two.php$           /views/two.php   
 RewriteRule ^three.php$         /views/three.php   
 
+RewriteRule ^items/(.*)/(.*)$    /api/items.php?color=$1&gender=$2 
+
+#x.com/items/h/x
+#RewriteRule ^items.php/()/()$         /api/items.php?color=$1      
 
 
