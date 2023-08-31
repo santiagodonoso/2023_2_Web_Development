@@ -1,22 +1,3 @@
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteRule ^([^\.]+)$ $1.php [NC,L]
-
-# Take the user to the index page
-RewriteRule ^$                  /views/index.php 
-RewriteRule ^one.php$           /views/one.php   
-RewriteRule ^two.php$           /views/two.php   
-RewriteRule ^three.php$         /views/three.php   
-
-RewriteRule ^items/(.*)/(.*)$    /api/items.php?color=$1&gender=$2 
-
-# admin, editor, reviewer             name   last name
-# We need a page 127.0.0.1/user/Santiago/Donoso/role
-
-# 127.0.0.1/user/A/B/admin          Hi A B, you are an admin
-# 127.0.0.1/user/X/Y/editor         Hi X Y, you are an editor
-# 127.0.0.1/user/AAX/BBY/reviewer    Hi AAX BBY, you are an reviewer
-
-
-
-
+RewriteCond %{REQUEST_URI}  !(\.png|\.jpg|\.webp|\.gif|\.jpeg|\.zip|\.css|\.svg|\.js|\.pdf)$
+RewriteRule (.*) routes.php [QSA,L]
