@@ -16,8 +16,9 @@
 <body>
 
   <nav>
-    <a href="/"        class="<?= $active_link == 'index' ? 'active' : '' ; ?>">Home</a>
+    <a href="/" class="<?= $active_link == 'index' ? 'active' : '' ; ?>">Home</a>
     <a href="/one.php" class="<?= $active_link == 'one' ? 'active' : '' ; ?>">One</a>
     <a href="/two.php" class="<?= $active_link == 'two' ? 'active' : '' ; ?>">Two</a>
+    <a href="/three.php" class="<?= $active_link == 'three' ? 'active' : '' ; ?>">Three</a>
   </nav>
   
