@@ -1,3 +1,3 @@
 <?php
-  echo 'x';
+  echo $name;
 ?>

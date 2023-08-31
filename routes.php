@@ -7,7 +7,7 @@ get('/', 'views/index');
 
 get('/items/$the_color', 'views/items');
 
-get('/user', 'views/user');
+get('/user/$name', 'views/user');
 
 
 
