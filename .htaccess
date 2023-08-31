@@ -4,5 +4,7 @@ RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
 
 # Take the user to the index page
-RewriteRule ^$                /views/index.php 
-RewriteRule ^one.php$         /views/one.php   
+RewriteRule ^$                  /views/index.php 
+RewriteRule ^one.php$           /views/one.php   
+RewriteRule ^two.php$           /views/two.php   
+RewriteRule ^three.php$         /views/three.php   
