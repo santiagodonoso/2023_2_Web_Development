@@ -1,4 +1,6 @@
 <?php
+ 
+ // 1405
 
 require_once __DIR__.'/router.php';
 
@@ -9,7 +11,12 @@ get('/items/$the_color', 'views/items');
 
 get('/user/$name', 'views/user');
 
+// API
+get('/api/items', 'api/items');
 
+
+// Page not found
+any('/404','views/404.php');
 
 /*
 // ##################################################

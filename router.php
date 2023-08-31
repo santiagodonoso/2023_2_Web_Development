@@ -88,7 +88,6 @@ function out($text)
 {
 	echo htmlspecialchars($text);
 }
-
 function set_csrf()
 {
 	session_start();
@@ -97,7 +96,6 @@ function set_csrf()
 	}
 	echo '<input type="hidden" name="csrf" value="' . $_SESSION["csrf"] . '">';
 }
-
 function is_csrf_valid()
 {
 	session_start();
