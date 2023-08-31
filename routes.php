@@ -5,6 +5,10 @@ require_once __DIR__.'/router.php';
 // ##################################################
 get('/', 'views/index');
 
+get('/items/$the_color', 'views/items');
+
+get('/user', 'views/user');
+
 
 
 /*
