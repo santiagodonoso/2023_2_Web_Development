@@ -2,6 +2,8 @@
 
 require_once __DIR__.'/router.php';
 
+
+/*
 // ##################################################
 // ##################################################
 // ##################################################
@@ -66,3 +68,4 @@ post('/user', '/api/save_user');
 // The 404.php which is inside the views folder will be called
 // The 404.php has access to $_GET and $_POST
 any('/404','views/404.php');
+*/
