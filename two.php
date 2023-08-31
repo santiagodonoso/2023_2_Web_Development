@@ -1,4 +1,5 @@
 <?php
+$title = 'Two';
 require_once __DIR__ . '/header.php';
 ?>
 
