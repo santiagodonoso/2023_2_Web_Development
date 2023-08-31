@@ -1,5 +1,6 @@
 <?php
 $title = 'One';
+$active_link = 'one';
 require_once __DIR__ . '/header.php';
 ?>
 

@@ -1,5 +1,6 @@
 <?php
 $title = 'Home';
+$active_link = 'index';
 require_once __DIR__ . '/header.php';
 ?>
 
