@@ -10,7 +10,13 @@ RewriteRule ^three.php$         /views/three.php
 
 RewriteRule ^items/(.*)/(.*)$    /api/items.php?color=$1&gender=$2 
 
-#x.com/items/h/x
-#RewriteRule ^items.php/()/()$         /api/items.php?color=$1      
+# admin, editor, reviewer             name   last name
+# We need a page 127.0.0.1/user/Santiago/Donoso/role
+
+# 127.0.0.1/user/A/B/admin          Hi A B, you are an admin
+# 127.0.0.1/user/X/Y/editor         Hi X Y, you are an editor
+# 127.0.0.1/user/AAX/BBY/reviewer    Hi AAX BBY, you are an reviewer
+
+
 
 
