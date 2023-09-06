@@ -9,7 +9,7 @@
   
 <nav>
   <a href="/">Home</a>
-  <a href="/admin">Admin</a>
-  <a href="/login">Login</a>
-  <a href="/logout">Logout</a>
+  <a href="/admin.php">Admin</a>
+  <a href="/login.php">Login</a>
+  <a href="/logout.php">Logout</a>
 </nav>
