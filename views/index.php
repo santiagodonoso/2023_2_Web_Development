@@ -1,5 +1,16 @@
 <?php
-$lg = $lg ?? 'en' ;
+
+$allowed_languages = ['en', 'dk', 'sp'];
+// in_array
+if( ! isset($lg) ){
+  $lg = 'en';
+}
+if( ! in_array($lg , $allowed_languages) ){
+  header('Location: /');
+  exit();
+}
+
+// $lg = $lg ?? 'en' ;
 $dictionary = file_get_contents(__DIR__.'/../dictionary.json');
 $dictionary = json_decode($dictionary, true); // convert text into object
 // var_dump($dictionary); // string(77) "[ "home_en" => "home", "home_dk" => "hjem", "home_sp" => "Inicio" ]" 
