@@ -1,8 +1,6 @@
 <?php
-
-$lg = $_GET['language'] ?? 'en' ;
-
-$dictionary = file_get_contents('dictionary.json');
+$lg = $lg ?? 'en' ;
+$dictionary = file_get_contents(__DIR__.'/../dictionary.json');
 $dictionary = json_decode($dictionary, true); // convert text into object
 // var_dump($dictionary); // string(77) "[ "home_en" => "home", "home_dk" => "hjem", "home_sp" => "Inicio" ]" 
 // print_r($dictionary); // [ "home_en" => "home", "home_dk" => "hjem", "home_sp" => "Inicio" ] 
@@ -20,5 +18,8 @@ $dictionary = json_decode($dictionary, true); // convert text into object
   <h1>
     <?= $dictionary['home_'.$lg] ?>
   </h1>
+  <p>
+    <?= $dictionary['welcome_'.$lg] ?>
+  </p>
 </body>
 </html>
