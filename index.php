@@ -1,6 +1,6 @@
 <?php
 
-$default_language = 'en';
+$lg = $_GET['language'] ?? 'en' ;
 
 $dictionary = file_get_contents('dictionary.json');
 $dictionary = json_decode($dictionary, true); // convert text into object
@@ -18,7 +18,7 @@ $dictionary = json_decode($dictionary, true); // convert text into object
 </head>
 <body>
   <h1>
-    <?= $dictionary['home_'.$default_language] ?>
+    <?= $dictionary['home_'.$lg] ?>
   </h1>
 </body>
 </html>
