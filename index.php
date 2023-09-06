@@ -1,4 +1,5 @@
 <?php
+$title = 'Company';
 require_once __DIR__ . '/components/header.php';
 ?>
 

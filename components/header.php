@@ -7,7 +7,9 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>
+    <?= $title ?? 'xxxxxxxxxxx' ?>
+  </title>
 </head>
 <body>
   
@@ -16,10 +18,9 @@ session_start();
   <a href="/admin.php">Admin</a>
 
 
-  <!-- <a href="/login.php">Login</a> -->
-  <!-- <a href="/logout.php">Logout</a> -->
-
-  <a href="<?= $_SESSION ? '/logout.php' : '/login.php' ?>"><?= $_SESSION ? 'Logout' : 'Login' ?></a>
+  <a href="<?= $_SESSION ? '/logout.php' : '/login.php' ?>">
+    <?= $_SESSION ? 'Logout' : 'Login' ?>
+  </a>
 
 
 
