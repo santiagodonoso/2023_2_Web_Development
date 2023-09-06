@@ -1,10 +1,3 @@
-<?php
-session_start();
-if( ! $_SESSION ){
-  header('Location: /login.php');
-  exit();
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,8 +6,10 @@ if( ! $_SESSION ){
   <title>Document</title>
 </head>
 <body>
-  <h1>
-    Hi <?= $_SESSION['email'] ?>
-  </h1>
-</body>
-</html>
+  
+<nav>
+  <a href="/">Home</a>
+  <a href="/admin">Admin</a>
+  <a href="/login">Login</a>
+  <a href="/logout">Logout</a>
+</nav>
