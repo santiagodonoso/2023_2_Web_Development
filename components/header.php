@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +14,13 @@
 <nav>
   <a href="/">Home</a>
   <a href="/admin.php">Admin</a>
-  <a href="/login.php">Login</a>
-  <a href="/logout.php">Logout</a>
+
+
+  <!-- <a href="/login.php">Login</a> -->
+  <!-- <a href="/logout.php">Logout</a> -->
+
+  <a href="<?= $_SESSION ? '/logout.php' : '/login.php' ?>"><?= $_SESSION ? 'Logout' : 'Login' ?></a>
+
+
+
 </nav>
