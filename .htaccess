@@ -6,3 +6,6 @@ RewriteRule ^signup$            views/signup.php [NC,L]
 RewriteRule ^login$             views/login.php [NC,L]
 RewriteRule ^products$          views/products.php [NC,L]
 
+# API
+
+RewriteRule ^api/products/(.*)$   api/api_get_product.php [NC,L]
