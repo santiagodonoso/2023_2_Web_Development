@@ -16,37 +16,17 @@ $products = [
   Products
 </h1>
 
-<?php foreach($products as $product){ ?>
+<?php foreach($products as $product): ?>
   <div class=''>
     <div><?= $product[0] ?></div>
     <div><?= $product[1] ?></div>
-  </div>
-<?php } ?>
+  </div>  
+<?php endforeach; ?>
 
 
 
 
 
-
-
-
-
-<?php
-  // foreach($products as $product){
-  //   echo "<div class=''>
-  //           <div>1</div>
-  //           <div>A</div>
-  //         </div>";
-  // }
-
-  
-?>
-
-
-<!-- <div>
-  <div>1</div>
-  <div>A</div>
-</div> -->
 
 <?php
 require_once __DIR__ . '/comp_footer.php';
