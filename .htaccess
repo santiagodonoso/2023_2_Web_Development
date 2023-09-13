@@ -1,6 +1,9 @@
 RewriteEngine On
 
 RewriteRule ^$ views/index.php [NC,L]
+RewriteRule ^contact-us$ views/contact-us.php [NC,L]
+RewriteRule ^signup$ views/signup.php [NC,L]
+RewriteRule ^login$ views/login.php [NC,L]
 
 
 
