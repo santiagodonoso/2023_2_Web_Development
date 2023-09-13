@@ -9,6 +9,7 @@
 
 <nav class="">
   <a href="/">Home</a>
+  <a href="/products">Products</a>
   <a href="/contact-us">Contact us</a>
   <a href="/signup">Signup</a>
   <a href="/login">login</a>
