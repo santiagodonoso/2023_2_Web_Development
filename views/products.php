@@ -19,7 +19,7 @@ $products = [
 <?php foreach($products as $product): ?>
   <div class=''>
     <div><?= $product[0] ?></div>
-    <a href="/api/products/1" onclick="get_product(); return false"><?= $product[1] ?></a>
+    <a href="/api/products/<?= $product[0] ?>" onclick="get_product(<?= $product[0] ?>); return false"><?= $product[1] ?></a>
   </div>  
 <?php endforeach; ?>
 
