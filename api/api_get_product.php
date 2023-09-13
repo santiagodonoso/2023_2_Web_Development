@@ -1,11 +1,8 @@
 <?php
 
-echo $_GET['id'];
-exit();
-
 // keys values assosiative
 $product = [
-  'id'    => 1,
+  'id'    => $_GET['id'],
   'name'  => 'A'
 ]; 
 // Cannot echo arrays

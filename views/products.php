@@ -19,11 +19,15 @@ $products = [
 <?php foreach($products as $product): ?>
   <div class=''>
     <div><?= $product[0] ?></div>
-    <div><?= $product[1] ?></div>
+    <a href="/api/products/1"><?= $product[1] ?></a>
   </div>  
 <?php endforeach; ?>
 
 
+<div class="w-full h-20 bg-sky-300">
+
+
+</div>
 
 
 
