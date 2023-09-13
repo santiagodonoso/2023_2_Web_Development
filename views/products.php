@@ -19,7 +19,7 @@ $products = [
 <?php foreach($products as $product){ ?>
   <div class=''>
     <div><?= $product[0] ?></div>
-    <div>A</div>
+    <div><?= $product[1] ?></div>
   </div>
 <?php } ?>
 
