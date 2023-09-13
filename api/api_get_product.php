@@ -1,4 +1,8 @@
 <?php
+
+echo 
+exit();
+
 // keys values assosiative
 $product = [
   'id'    => 1,
