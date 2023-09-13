@@ -1,6 +1,6 @@
 <?php
 
-echo 
+echo $_GET['id'];
 exit();
 
 // keys values assosiative

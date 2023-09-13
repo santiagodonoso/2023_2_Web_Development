@@ -8,4 +8,4 @@ RewriteRule ^products$          views/products.php [NC,L]
 
 # API
 
-RewriteRule ^api/products/(.*)$   api/api_get_product.php [NC,L]
+RewriteRule ^api/products/(.*)$   api/api_get_product.php?id=$1 [NC,L]
