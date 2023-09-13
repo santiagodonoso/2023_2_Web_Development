@@ -25,8 +25,7 @@ $products = [
 
 
 <div class="w-full h-20 bg-sky-300">
-
-
+  <div id="product_id"></div>
 </div>
 
 
