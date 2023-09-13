@@ -16,13 +16,32 @@ $products = [
   Products
 </h1>
 
+<?php foreach($products as $product){ ?>
+  <div class=''>
+    <div>1</div>
+    <div>A</div>
+  </div>
+<?php } ?>
+
+
+
+
+
+
+
+
+
+
+
 <?php
-  foreach($products as $product){
-    echo "<div>
-            <div>1</div>
-            <div>A</div>
-          </div>";
-  }
+  // foreach($products as $product){
+  //   echo "<div class=''>
+  //           <div>1</div>
+  //           <div>A</div>
+  //         </div>";
+  // }
+
+  
 ?>
 
 
