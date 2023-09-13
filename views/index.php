@@ -1,5 +1,5 @@
 <?php
-require_once "header.php";
+require_once __DIR__ . '/header.php';
 ?>
 
 <h1>
@@ -7,5 +7,5 @@ require_once "header.php";
 </h1>
 
 <?php
-require_once "footer.php";
+require_once __DIR__ . '/footer.php';
 ?>
