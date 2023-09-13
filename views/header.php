@@ -5,7 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body>
+<body class="">
+
+<nav class="">
+  <a href="/">Home</a>
+  <a href="/contact-us">Contact us</a>
+  <a href="/signup">Signup</a>
+  <a href="/login">login</a>
+</nav>
+
+
 
 <main>
   
