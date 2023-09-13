@@ -1,3 +1,10 @@
 RewriteEngine On
 
-RewriteRule ^$ views/index.php
+RewriteRule ^$ views/index.php [NC,L]
+
+
+
+
+
+
+
