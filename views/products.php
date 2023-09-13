@@ -18,7 +18,10 @@ $products = [
 
 <?php
   foreach($products as $product){
-    echo $product[0];
+    echo "<div>
+            <div>1</div>
+            <div>A</div>
+          </div>";
   }
 ?>
 
