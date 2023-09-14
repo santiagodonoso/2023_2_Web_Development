@@ -9,10 +9,12 @@ try{
   $db = _db();
   $q = $db->prepare('
     UPDATE users 
-    SET user_name = :user_name
+    SET user_name = :user_name, 
+        user_last_name = :user_last_name
     WHERE user_id = :user_id
   ');
   $q->bindValue(':user_name', $_POST['user_name']); // dup. line alt+shift+arrow down
+  $q->bindValue(':user_last_name', $_POST['user_last_name']); 
   $q->bindValue(':user_id', $_POST['user_id']); 
   $q->execute();
   $counter = $q->rowCount(); 
