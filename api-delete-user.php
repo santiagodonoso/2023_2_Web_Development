@@ -5,7 +5,7 @@ require_once __DIR__ . '/_.php';
 try{
 
   // TODO: validate the user_name
-
+  
   $db = _db();
   $q = $db->prepare(' DELETE FROM 
                       users WHERE user_id = :user_id');
@@ -17,6 +17,7 @@ try{
   http_response_code(400);
   echo json_encode(['info' => 'database error']);
 }
+
 
 
 
