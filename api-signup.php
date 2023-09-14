@@ -19,6 +19,13 @@ try{
   $q->execute();
   $user_id = $db->lastInsertId();
   $_SESSION['user_id'] = $user_id;
+
+  // Add a new field in the database for the mobile number
+  // 8 digit number... must be your mobile number
+  // When the user signs-up, the mobile will be also inserted in the db
+  // Send a message to the mobile number with the text
+  // "Welcome to my system"
+
   echo json_encode([
       'user_id' => (int)$user_id,
       'user_name' => $_POST['user_name'],
