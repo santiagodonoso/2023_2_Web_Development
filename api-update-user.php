@@ -1,5 +1,10 @@
 <?php
 
+session_start();
+// echo $_SESSION['user_id'];
+// exit();
+
+
 require_once __DIR__ . '/_.php';
 
 try{
@@ -15,7 +20,7 @@ try{
   ');
   $q->bindValue(':user_name', $_POST['user_name']); // dup. line alt+shift+arrow down
   $q->bindValue(':user_last_name', $_POST['user_last_name']); 
-  $q->bindValue(':user_id', $_POST['user_id']); 
+  $q->bindValue(':user_id', $_SESSION['user_id']); 
   $q->execute();
   $counter = $q->rowCount(); 
   
