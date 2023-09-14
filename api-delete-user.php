@@ -12,7 +12,7 @@ try{
   $q->bindValue(':user_id', $_POST['user_id']);
   $q->execute();
   $deleted_rows = $q->rowCount(); 
-  echo json_encode(['info' => 'user deleted']);
+  http_response_code(204);
 }catch(Exception $e){
   http_response_code(400);
   echo json_encode(['info' => 'database error']);
