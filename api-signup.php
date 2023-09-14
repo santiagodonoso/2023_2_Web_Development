@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once __DIR__ . '/_.php';
 
 try{
@@ -18,7 +18,7 @@ try{
 
   $q->execute();
   $user_id = $db->lastInsertId();
-
+  $_SESSION['user_id'] = $user_id;
   echo json_encode([
       'user_id' => (int)$user_id,
       'user_name' => $_POST['user_name'],
