@@ -23,5 +23,4 @@ async function signup(){
   // TODO: redirect to the login page
   location.href="/login"
 
-
 }
