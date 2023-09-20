@@ -3,6 +3,7 @@
 require_once __DIR__.'/../_.php';
 
 try{
+  
   _validate_user_name();
   _validate_user_last_name();
   _validate_user_email();
