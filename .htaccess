@@ -1,0 +1,15 @@
+RewriteEngine On
+
+#####
+RewriteRule ^validator.js$    js/validator.js [NC,L]
+
+
+#####
+RewriteRule ^$                views/index.php [NC,L]
+
+
+
+
+
+
+

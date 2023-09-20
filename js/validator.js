@@ -1,4 +1,4 @@
-
+alert()
 // ##############################
 function validate(callback) {
 	const form = event.target
@@ -63,7 +63,7 @@ function validate(callback) {
 	if (!form.querySelector(".validate_error")) { callback(); return }
 	
   form.querySelector(".validate_error").focus()
-  return false
+
 }
 
 // ##############################
