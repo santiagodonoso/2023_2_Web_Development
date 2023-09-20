@@ -5,6 +5,9 @@ require_once __DIR__.'/../_.php';
 try{
   _validate_user_name();
 
+  $user_id = bin2hex(random_bytes(5));
+  echo json_encode(['user_id' => $user_id]);
+
 }catch(Exception $e){
   http_response_code(400);
   echo json_encode(['info'=>$e->getMessage()]);
