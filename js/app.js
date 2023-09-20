@@ -5,11 +5,15 @@ async function signup(){
     method : "POST",
     body : new FormData(frm)
   })
+
+  const data = await conn.text()
+  console.log(data) 
+  
+ 
   if( ! conn.ok ){
     alert("ups...")
     return
   }
 
-  const data = await conn.text()
-  console.log(data)
+
 }

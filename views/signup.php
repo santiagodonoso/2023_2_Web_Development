@@ -33,7 +33,7 @@ require_once __DIR__.'/_header.php';
     <label for="">
       user confirm password
     </label>    
-    <input name="user_password" type="text"
+    <input name="user_confirm_password" type="text"
     data-validate="match" data-match-name="user_password">
 
 
