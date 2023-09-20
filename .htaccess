@@ -8,7 +8,7 @@ RewriteRule ^validator.js$    js/validator.js [NC,L]
 #####
 RewriteRule ^$                views/index.php [NC,L]
 RewriteRule ^signup$          views/signup.php [NC,L]
-
+RewriteRule ^login$           views/login.php [NC,L]
 
 
 
