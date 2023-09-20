@@ -1,4 +1,4 @@
-alert()
+
 // ##############################
 function validate(callback) {
 	const form = event.target

@@ -2,8 +2,8 @@
 
 <main>
   <form onsubmit="validate(signup); return false">
-  
-
+    <input name="user_name" type="text">
+    <button>Signup</button>
   </form>
 </main>
 
