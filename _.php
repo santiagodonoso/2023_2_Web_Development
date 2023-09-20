@@ -79,6 +79,17 @@ function _validate_user_password(){
 }
 
 
+// ##############################
+function _validate_user_confirm_password(){
+  $error = 'user_confirm_password must match the user_password';
+  if(!isset($_POST['user_confirm_password'])){ 
+    throw new Exception($error); 
+  }
+  $_POST['user_confirm_password'] = trim($_POST['user_confirm_password']);
+  if( $_POST['user_password'] != $_POST['user_confirm_password']){
+    throw new Exception($error); 
+  }
+}
 
 
 

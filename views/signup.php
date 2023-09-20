@@ -6,16 +6,16 @@ require_once __DIR__.'/_header.php';
 <main>
   <form onsubmit="validate(signup); return false">
 
-    <label for="">
+    <label for="user_name">
       user name mix <?= USER_NAME_MIN ?> max <?= USER_NAME_MAX ?>
     </label>
-    <input name="user_name" type="text"
+    <input id="user_name" name="user_name" type="text"
     data-validate="str" data-min="<?= USER_NAME_MIN ?>" data-max="<?= USER_NAME_MAX ?>">
 
-    <label for="">
+    <label for="user_last_name">
       user last name mix <?= USER_LAST_NAME_MIN ?> max <?= USER_LAST_NAME_MAX ?>
     </label>    
-    <input name="user_last_name" type="text"
+    <input id="user_last_name" name="user_last_name" type="text"
     data-validate="str" data-min="<?= USER_LAST_NAME_MIN ?>" data-max="<?= USER_LAST_NAME_MAX ?>">
 
     <label for="">
