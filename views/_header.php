@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="/app.css">
   <title>Document</title>
 </head>
-<body class="w-full h-screen bg-sky-600">
+<body class="w-full h-screen bg-sky-600 text-xl">
   
   <nav>
     <a href="/">Home</a>
