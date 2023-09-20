@@ -45,6 +45,20 @@ function _validate_user_last_name(){
 }
 
 
+// ##############################
+function _validate_user_email(){
+  $error = 'user_email invalid';
+  if(!isset($_POST['user_email'])){ 
+    throw new Exception($error); 
+  }
+  $_POST['user_email'] = trim($_POST['user_email']); 
+  if( ! filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL) ){
+    throw new Exception($error); 
+  }
+  
+}
+
+
 
 
 

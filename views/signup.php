@@ -18,6 +18,10 @@ require_once __DIR__.'/_header.php';
     <input name="user_last_name" type="text"
     data-validate="str" data-min="<?= USER_LAST_NAME_MIN ?>" data-max="<?= USER_LAST_NAME_MAX ?>">
 
+    <input name="user_email" type="text" 
+    data-validate="email">
+
+
     <button>Signup</button>
 
   </form>
