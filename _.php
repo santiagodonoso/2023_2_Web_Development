@@ -22,7 +22,6 @@ function _validate_user_name(){
   }
 }
 
-
 // ##############################
 define('USER_LAST_NAME_MIN', 2);
 define('USER_LAST_NAME_MAX', 20);
@@ -56,7 +55,6 @@ function _validate_user_email(){
   }
 }
 
-
 // ##############################
 define('USER_PASSWORD_MIN', 6);
 define('USER_PASSWORD_MAX', 50);
@@ -77,7 +75,6 @@ function _validate_user_password(){
     throw new Exception($error);
   }
 }
-
 
 // ##############################
 function _validate_user_confirm_password(){
