@@ -7,7 +7,8 @@ require_once __DIR__.'/_header.php';
   <form onsubmit="validate(signup); return false" 
   class="flex flex-col px-4 text-white 
   lg:w-1/3 mx-auto gap-4 [&_input]:border [&_input]:border-black
-  [&_input]:h-10 [&_input]:rounded-md [&_input]:outline-none">
+  [&_input]:h-10 [&_input]:rounded-md [&_input]:outline-none
+  [&_input]:text-black">
 
     <div class="grid">
       <label for="user_name">

@@ -631,6 +631,11 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
+.\[\&_input\]\:text-black input {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .\[\&_input\]\:outline-none input {
   outline: 2px solid transparent;
   outline-offset: 2px;
