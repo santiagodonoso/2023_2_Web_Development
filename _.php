@@ -44,7 +44,6 @@ function _validate_user_last_name(){
   }
 }
 
-
 // ##############################
 function _validate_user_email(){
   $error = 'user_email invalid';
@@ -55,9 +54,29 @@ function _validate_user_email(){
   if( ! filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL) ){
     throw new Exception($error); 
   }
-  
 }
 
+
+// ##############################
+define('USER_PASSWORD_MIN', 6);
+define('USER_PASSWORD_MAX', 50);
+function _validate_user_password(){
+
+  $error = 'user_password min '.USER_PASSWORD_MIN.' max '.USER_PASSWORD_MAX;
+
+  if(!isset($_POST['user_password'])){ 
+    throw new Exception($error); 
+  }
+  $_POST['user_password'] = trim($_POST['user_password']);
+
+  if( strlen($_POST['user_password']) < USER_PASSWORD_MIN ){
+    throw new Exception($error);
+  }
+
+  if( strlen($_POST['user_password']) > USER_PASSWORD_MAX ){
+    throw new Exception($error);
+  }
+}
 
 
 

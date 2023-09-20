@@ -6,6 +6,9 @@ try{
   _validate_user_name();
   _validate_user_last_name();
   _validate_user_email();
+  _validate_user_password();
+  // TODO: Confirm password here, how ??????
+  // We do it together
 
   $user_id = bin2hex(random_bytes(5));
   echo json_encode(['user_id' => $user_id]);
