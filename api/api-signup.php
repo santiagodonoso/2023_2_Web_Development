@@ -24,8 +24,7 @@ try{
       :user_updated_at,
       :user_deleted_at)'
   );
-  $user_id = bin2hex(random_bytes(5));
-  $q->bindValue(':user_id', $user_id);
+  $q->bindValue(':user_id', null);
   $q->bindValue(':user_name', $_POST['user_name']);
   $q->bindValue(':user_last_name', $_POST['user_last_name']);
   $q->bindValue(':user_email', $_POST['user_email']);
@@ -41,7 +40,7 @@ try{
     throw new Exception('ups...', 500);
   }
 
-  echo json_encode(['user_id' => $user_id]);
+  echo json_encode(['user_id' => $db->lastInsertId()]);
 
 }catch(Exception $e){
   try{
