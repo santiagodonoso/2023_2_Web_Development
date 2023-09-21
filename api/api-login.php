@@ -9,15 +9,17 @@ try{
   $q = $db->prepare('
     SELECT * FROM users
     WHERE user_email = :user_email
-    AND user_password = :user_password
   ');
   $q->bindValue(':user_email', $_POST['user_email']);
-  $q->bindValue(':user_password', $_POST['user_password']);
-
   $q->execute();
   $user = $q->fetch();
 
   if( ! $user ){
+    throw new Exception('invalid credentials', 400);
+  }
+
+  // Check if the found user has a valid password
+  if( ! password_verify($_POST['user_password'], $user['user_password']) ){
     throw new Exception('invalid credentials', 400);
   }
 
