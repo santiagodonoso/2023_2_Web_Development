@@ -9,9 +9,10 @@ try{
   $db = _db();
   $q = $db->prepare('
     UPDATE users
-    SET user_deleted_at = time()
+    SET user_deleted_at = :time
     WHERE user_id = :user_id
   ');
+  $q->bindValue(':time', time());
   $q->bindValue(':user_id', $user_id);
   $q->execute();
   $counter = $q->rowCount();

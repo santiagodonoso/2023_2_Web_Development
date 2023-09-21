@@ -5,7 +5,8 @@ function _db(){
 	try{
     $user_name = "";
     $user_password = "";
-	  $db_connection = 'sqlite:'.__DIR__.'/database.sqlite';
+	  // $db_connection = 'sqlite:'.__DIR__.'/database.sqlite';
+	  $db_connection = "mysql:host=localhost; dbname=company; charset=utf8mb4";
 	
 	  // PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
 	  //   PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ   [{}]    $user->id
