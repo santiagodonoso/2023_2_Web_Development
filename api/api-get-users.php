@@ -1,9 +1,11 @@
 <?php
+header('Content-Type: application/json');
 require_once __DIR__.'/../_.php';
 try{
 
   $db = _db();
-  $q = $db->prepare('SELECT * FROM users');
+  $q = $db->prepare('SELECT * FROM users LIMIT :page, 2');
+  $q->bindValue(':page', $_GET['page'], PDO::PARAM_INT );
   $q->execute();
   $users = $q->fetchAll();
   echo json_encode($users);
