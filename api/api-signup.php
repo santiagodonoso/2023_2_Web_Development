@@ -10,6 +10,8 @@ try{
   _validate_user_password();
   _validate_user_confirm_password();
 
+  $db = _db();
+
   $user_id = bin2hex(random_bytes(5));
   echo json_encode(['user_id' => $user_id]);
 
