@@ -17,6 +17,8 @@ CREATE TABLE users(
 INSERT INTO users VALUES ("1", "A", "B", "a@a.com", "password", "Admin", "1", "0", "0");
 
 
+SELECT * FROM users;
+
 SELECT * FROM users
 WHERE user_email = '@a' 
 AND user_password = 'password';
