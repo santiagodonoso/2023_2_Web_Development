@@ -9,10 +9,12 @@ CREATE TABLE users(
   user_role           TEXT,
   user_created_at     TEXT,
   user_updated_at     TEXT,
+  user_deleted_at     TEXT,
   PRIMARY KEY(user_id)
 ) WITHOUT ROWID;
 
-INSERT INTO users VALUES ("1", "A", "B", "@a", "password", "Admin", "1", "1");
+-- Seeding
+INSERT INTO users VALUES ("1", "A", "B", "a@a.com", "password", "Admin", "1", "0", "0");
 
 
 SELECT * FROM users
