@@ -17,7 +17,7 @@ Insert the snippet
 	"API for PHP": {
 		"prefix": "_api",
 		"body": [
-			"require_once __DIR__.'/../_.php';",
+			"require_once __DIR__.'/../_.php';"
 			"try{"
       ""
       "\t$1"
