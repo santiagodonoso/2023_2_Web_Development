@@ -33,6 +33,11 @@ try{
   $q->bindValue(':user_created_at', time());
   $q->bindValue(':user_updated_at', 0);
 
+  $q->execute();
+  $counter = $q->rowCount();
+  if( $counter != 1 ){
+    throw new Exception('ups...', 500);
+  }
 
   echo json_encode(['user_id' => $user_id]);
 
