@@ -45,14 +45,15 @@ try{
 
 }catch(Exception $e){
   try{
-    if( ! $e->getCode() || ! $e->getMessage()){
+    if( ! ctype_digit($e->getCode())){
       throw new Exception();
     }
     http_response_code($e->getCode());
     echo json_encode(['info'=>$e->getMessage()]);
   }catch(Exception $ex){
+    // echo $ex;
     http_response_code(500);
-    echo json_encode($ex);    
+    echo json_encode(['info'=>json_encode($ex)]);    
   }
 
 }
