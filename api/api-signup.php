@@ -11,8 +11,29 @@ try{
   _validate_user_confirm_password();
 
   $db = _db();
-
+  $q = $db->prepare('
+    INSERT INTO users 
+    VALUES (
+      :user_id, 
+      :user_name, 
+      :user_last_name, 
+      :user_email, 
+      :user_password, 
+      :user_role, 
+      :user_created_at, 
+      :user_updated_at)'
+  );
   $user_id = bin2hex(random_bytes(5));
+  $q->bindValue(':user_id', $user_id);
+  $q->bindValue(':user_name', $_POST['user_name']);
+  $q->bindValue(':user_last_name', $_POST['user_last_name']);
+  $q->bindValue(':user_email', $_POST['user_email']);
+  $q->bindValue(':user_password', $_POST['user_password']);
+  $q->bindValue(':user_role', 'user');
+  $q->bindValue(':user_created_at', time());
+  $q->bindValue(':user_updated_at', 0);
+
+
   echo json_encode(['user_id' => $user_id]);
 
 }catch(Exception $e){
