@@ -2,13 +2,9 @@
 module.exports = {
   content: ["../views/*.php"],
   theme: {
-    extend: {
-      fontFamily: {
-        'roboto': ['Roboto', 'sans-serif'],
-      },      
-    },
+    extend: {},
   },
   plugins: [],
-  darkMode: 'class'
+  darkMode : "class"
 }
 

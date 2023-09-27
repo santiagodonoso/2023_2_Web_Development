@@ -24,6 +24,7 @@ $users = $sql->fetchAll();
       <div class="w-1/5"><?= $user['user_name'] ?></div>
       <div class="w-1/5"><?= $user['user_last_name'] ?></div>
       <div class="w-1/5"><?= $user['user_email'] ?></div>
+      <div class="w-1/5"><?= $user['user_address'] ?></div>
       <div class="ml-auto">block</div>
     </div>
   <?php endforeach?>

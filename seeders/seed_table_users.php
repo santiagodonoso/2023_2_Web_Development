@@ -28,6 +28,7 @@ $faker = Faker\Factory::create();
                 '$faker->firstName',
                 '$faker->lastName',
                 '$faker->email',
+                '$faker->address',
                 '$password',
                 'user',
                 $created_at,

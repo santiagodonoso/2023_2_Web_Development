@@ -33,7 +33,6 @@ function toogle_menu(){
   document.querySelector("#menu_background").classList.remove("hidden")
 }
 
-
 function toggle_language(){
   console.log("x")
   if( document.querySelector("#box_languages").classList.contains("hidden") ){
