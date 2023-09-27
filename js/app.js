@@ -2,6 +2,9 @@ function toggle_blocked(is_blocked){
   console.log(event.target)
   if(is_blocked == 0){
     event.target.innerHTML = "blocked"
+  }else
+  {
+    event.target.innerHTML = "unblocked"
   }
   console.log(is_blocked)
 }
