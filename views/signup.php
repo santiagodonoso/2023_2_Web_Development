@@ -11,7 +11,7 @@ require_once __DIR__.'/_header.php';
 
     <div class="grid">
       <label for="user_name" class="flex">
-        <span class="font-bold text-sky-600">name</span> 
+        <span class="font-bold text-pink-500">name</span> 
         <span class="ml-auto"><?= USER_NAME_MIN ?> to <?= USER_NAME_MAX ?> characters</span>
       </label>
       <input id="user_name" name="user_name" type="text"
@@ -20,8 +20,10 @@ require_once __DIR__.'/_header.php';
     </div>
 
     <div class="grid">
-      <label for="user_last_name">
-        last name (<?= USER_LAST_NAME_MIN ?> to <?= USER_LAST_NAME_MAX ?> characters)
+      <label for="user_last_name" class="flex">
+        <span class="font-bold text-pink-500">last name</span>   
+        <span class="ml-auto"><?= USER_LAST_NAME_MIN ?> to <?= USER_LAST_NAME_MAX ?> characters</span>
+        
       </label>    
       <input id="user_last_name" name="user_last_name" type="text"
       data-validate="str" data-min="<?= USER_LAST_NAME_MIN ?>" data-max="<?= USER_LAST_NAME_MAX ?>"
@@ -30,25 +32,24 @@ require_once __DIR__.'/_header.php';
 
     <div class="grid">
       <label for="">
-        email
+      <span class="font-bold text-pink-500">email</span> 
       </label>    
       <input name="user_email" type="text" 
       data-validate="email">
     </div>
 
-    <div class="grid">
-      <label for="">
-        password (<?= USER_PASSWORD_MIN ?> to <?= USER_PASSWORD_MAX ?> characters)
-      </label>    
+    <div class="grid" class="flex">
+      <label for="user_name" class="flex">
+        <span class="font-bold text-pink-500">password</span> 
+        <span class="ml-auto"><?= USER_PASSWORD_MIN ?> to <?= USER_PASSWORD_MAX ?> characters</span>
+      </label>        
       <input name="user_password" type="text"
       data-validate="str" data-min="<?= USER_PASSWORD_MIN ?>" data-max="<?= USER_PASSWORD_MAX ?>"
       class="">
     </div>
 
     <div class="grid">
-      <label for="">
-        confirm password
-      </label>    
+      <span class="font-bold text-pink-500">confirm password</span> 
       <input name="user_confirm_password" type="text"
       data-validate="match" data-match-name="user_password"
       class="">

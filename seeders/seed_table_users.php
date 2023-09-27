@@ -23,6 +23,7 @@ $faker = Faker\Factory::create();
   for($i = 0; $i < 10; $i++){
     // $user_id = bin2hex(random_bytes(16));
     $password = password_hash($faker->password, PASSWORD_DEFAULT);
+    $blocked  = rand(0,1);
     $created_at = time();
     $values .= "(null,
                 '$faker->firstName',
@@ -33,7 +34,9 @@ $faker = Faker\Factory::create();
                 'user',
                 $created_at,
                 0,
-                0),"; 
+                0,
+                $blocked
+              ),"; 
   }
   $values = rtrim($values, ",");
   $q .= $values;
