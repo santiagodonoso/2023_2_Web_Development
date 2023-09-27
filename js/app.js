@@ -1,3 +1,20 @@
+function toggle_blocked(){
+  console.log("x")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const system_theme = window.matchMedia("(prefers-color-scheme: dark)");
 // console.log(system_theme.theme)
 // if (system_theme.matches) {
@@ -42,9 +59,6 @@ function toggle_language(){
   }
   document.querySelector("#box_languages").classList.add("hidden")
 }
-
-
-
 
 
 

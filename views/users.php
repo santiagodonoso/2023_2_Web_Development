@@ -25,7 +25,9 @@ $users = $sql->fetchAll();
       <div class="w-1/5"><?= $user['user_last_name'] ?></div>
       <div class="w-1/5"><?= $user['user_email'] ?></div>
       <div class="w-1/5"><?= $user['user_address'] ?></div>
-      <div class="ml-auto">block</div>
+      <button class="ml-auto" onclick="toggle_blocked()">
+        <?= $user['user_is_blocked'] == 0 ? "unblocked" : "blocked" ?>
+      </button>
     </div>
   <?php endforeach?>
 </main>
