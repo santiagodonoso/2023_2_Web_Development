@@ -32,7 +32,7 @@ try{
   $q->bindValue(':user_role', 'user');
   $q->bindValue(':user_created_at', time());
   $q->bindValue(':user_updated_at', 0);
-  $q->bindValue(':user_deleted_at', 0);
+  // $q->bindValue(':user_deleted_at', 0);
 
   $q->execute();
   $counter = $q->rowCount();

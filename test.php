@@ -1,20 +1,13 @@
 <?php
+header('Content-Type: application/json');
 require_once __DIR__.'/../_.php';
 try{
 
   
 
 }catch(Exception $e){
-  try{
-    if( ! $e->getCode() || ! $e->getMessage()){ throw new Exception(); }
-    http_response_code($e->getCode());
-    echo json_encode(['info'=>$e->getMessage()]);
-  }catch(Exception $ex){
-    http_response_code(500);
-    echo json_encode($ex); 
-  }
+    $status_code = !ctype_digit($e->getCode()) ? 500 : $e->getCode();
+    $message = strlen($e->getMessage()) == 0 ? 'error - '.$e->getLine() : e->getMessage();
+    http_response_code($status_code);
+    echo json_encode(['info'=>$message]);
 }
-
-
-
-
