@@ -10,8 +10,9 @@ require_once __DIR__.'/_header.php';
   [&_input]:border-gray-600 [&_input]:h-10 [&_input]:rounded-md [&_input]:outline-none">
 
     <div class="grid">
-      <label for="user_name">
-        name (<?= USER_NAME_MIN ?> to <?= USER_NAME_MAX ?> characters)
+      <label for="user_name" class="flex">
+        <span class="font-bold text-sky-600">name</span> 
+        <span class="ml-auto"><?= USER_NAME_MIN ?> to <?= USER_NAME_MAX ?> characters</span>
       </label>
       <input id="user_name" name="user_name" type="text"
       data-validate="str" data-min="<?= USER_NAME_MIN ?>" data-max="<?= USER_NAME_MAX ?>"
