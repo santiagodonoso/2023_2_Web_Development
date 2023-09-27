@@ -1,12 +1,17 @@
-function toggle_blocked(is_blocked){
-  console.log(event.target)
-  if(is_blocked == 0){
+async function toggle_blocked(user_id, user_is_blocked){
+
+  console.log("user_id", user_id)
+  console.log("user_is_blocked", user_is_blocked)
+
+  if(user_is_blocked == 0){
     event.target.innerHTML = "blocked"
   }else
   {
     event.target.innerHTML = "unblocked"
   }
-  console.log(is_blocked)
+
+
+
 }
 
 

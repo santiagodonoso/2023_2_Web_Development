@@ -26,7 +26,7 @@ $users = $sql->fetchAll();
       <div class="w-1/5"><?= $user['user_email'] ?></div>
       <div class="w-1/5"><?= $user['user_address'] ?></div>
       <button class="ml-auto" 
-        onclick="toggle_blocked(<?= $user['user_is_blocked'] ?>)">
+        onclick="toggle_blocked(<?= $user['user_id'] ?>,<?= $user['user_is_blocked'] ?>)">
         <?= $user['user_is_blocked'] == 0 ? "unblocked" : "blocked" ?>
       </button>
     </div>

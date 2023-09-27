@@ -31,7 +31,7 @@ Insert the snippet
       ""
       "}catch(Exception $$e){"
       "\t\t$$status_code = !ctype_digit($$e->getCode()) ? 500 : $$e->getCode();"
-      "\t\t$$message = strlen($$e->getMessage()) == 0 ? 'error - '.$$e->getLine() : $e->getMessage();"
+      "\t\t$$message = strlen($$e->getMessage()) == 0 ? 'error - '.$$e->getLine() : $$e->getMessage();"
       "\t\thttp_response_code($$status_code);"
       "\t\techo json_encode(['info'=>$$message]);"
       "}"
