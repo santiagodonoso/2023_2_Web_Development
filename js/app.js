@@ -10,6 +10,10 @@ async function toggle_blocked(user_id, user_is_blocked){
     event.target.innerHTML = "unblocked"
   }
 
+  const conn = await fetch(
+    `api/api-toggle-user-blocked.php?user_id=${user_id}&user_is_blocked=${user_is_blocked}`)
+  const data = await conn.text()
+  console.log(data)
 
 
 }
