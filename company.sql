@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 27, 2023 at 08:39 AM
+-- Generation Time: Sep 27, 2023 at 12:10 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -32,48 +32,30 @@ CREATE TABLE `users` (
   `user_name` varchar(20) NOT NULL,
   `user_last_name` varchar(20) NOT NULL,
   `user_email` varchar(50) NOT NULL,
+  `user_address` varchar(100) NOT NULL,
   `user_password` varchar(255) NOT NULL,
   `user_role` varchar(10) NOT NULL,
   `user_created_at` char(10) NOT NULL,
   `user_updated_at` char(10) NOT NULL,
-  `user_deleted_at` char(10) NOT NULL
+  `user_deleted_at` char(10) NOT NULL,
+  `user_is_blocked` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `user_name`, `user_last_name`, `user_email`, `user_password`, `user_role`, `user_created_at`, `user_updated_at`, `user_deleted_at`) VALUES
-(1, 'Reina', 'Stark', 'elyssa71@berge.com', '$2y$10$eqyMUeW9KEOaRQX914fXrOQ..GxsjHoaF3Yyzt24lDT7oHE421rca', 'user', '1695479823', '0', '0'),
-(2, 'Lacy', 'Ortiz', 'ignacio.howell@yahoo.com', '$2y$10$Cj/gXehovTZ8CH1ogwPS6uujOMgA.LZSu3MweexzZ7/.0m16q4r0m', 'user', '1695479823', '0', '0'),
-(3, 'Tierra', 'Howell', 'towne.parker@gmail.com', '$2y$10$oXfNntLykKWjM2IPMYQhauxRg1QUUrx/Ya/W.iHWOFmaJSWFc4VUC', 'user', '1695479823', '0', '0'),
-(4, 'Jordy', 'Murray', 'boyer.emilia@hotmail.com', '$2y$10$neUkP61RwsHUaE2CXJ6YquKbAltUGHQ1yZhj5evtVQqdL7oqvfUYC', 'user', '1695479823', '0', '0'),
-(5, 'Westley', 'Runolfsdottir', 'welch.lola@yahoo.com', '$2y$10$HVn03gkn3Oh6XGpfi2xwpuqSWu4pjAVvl7efaCXyUdrMQ0QJgTQGe', 'user', '1695479824', '0', '0'),
-(6, 'Schuyler', 'Grady', 'hweissnat@yahoo.com', '$2y$10$cuFS57jyeG9/hJPaM9RC3eGPkMsw1JeLssW5Gjk6iI3nZKZ3fnxNC', 'user', '1695479824', '0', '0'),
-(7, 'Amos', 'McLaughlin', 'dibbert.sadye@yahoo.com', '$2y$10$IVqX6D5HE.lI21bxt3uPGO1dVagAuJmULK4aObjGQZTmYcuUikWsq', 'user', '1695479824', '0', '0'),
-(8, 'Alfred', 'Carter', 'trenton.schimmel@franecki.biz', '$2y$10$f9YtCGgTJ8n42CLpdOYg.eQRcfE4T0V2xWSwRa0dHFKlEURxmMYza', 'user', '1695479824', '0', '0'),
-(9, 'Tyree', 'Gerlach', 'chloe10@gusikowski.com', '$2y$10$XEqO3CWwYWmqIQHITRTyOu5N4Akh8FnmhBocJWEOETcXOaWMvv2vC', 'user', '1695479824', '0', '0'),
-(10, 'Russel', 'Haag', 'alexandria85@skiles.net', '$2y$10$i5EyzcYUoMvaEXMQPYxpye8CIvkEHK/prK6viXl6cMlg7duNkEr5y', 'user', '1695479824', '0', '0'),
-(11, 'Sandrine', 'Schimmel', 'agustina.west@gmail.com', '$2y$10$0hFWUCFGqzho3zdmtx1S4ug9.oIoP7gaANSXk7N0Lv9fNEb51eq/m', 'user', '1695479893', '0', '0'),
-(12, 'Phoebe', 'Moore', 'malachi.runolfsson@hotmail.com', '$2y$10$W8CBYFPfuyK5XLMtVXlY/eu2XmejVLkxP7YZWoiGwL30pUhN6oXA2', 'user', '1695479893', '0', '0'),
-(13, 'Devante', 'Donnelly', 'jayden95@king.net', '$2y$10$S5/9.AS.b.uSNC5BJZMQe.nlbZXuQBOmew7L7pEcAg/0Ljy4gg9qS', 'user', '1695479893', '0', '0'),
-(14, 'Rafael', 'Kreiger', 'xjakubowski@rosenbaum.com', '$2y$10$cwNf8D.XrKdsCpp6WCT/0eNLnimGNsysXGqcVXPD32SimtqWKthDq', 'user', '1695479894', '0', '0'),
-(15, 'Amely', 'Ruecker', 'feeney.rickey@hotmail.com', '$2y$10$b0xKGWEAxt/RKgCiNb0wVeNjt3h5OPn0PMSqef6PH8Bnr7YqGuhP6', 'user', '1695479894', '0', '0'),
-(16, 'Toni', 'Hodkiewicz', 'simonis.lafayette@gmail.com', '$2y$10$obWs5xbvl/tHa8R1cDYOCO0IjZjUucibWnRVnustgcYL0KTNJMzjG', 'user', '1695479894', '0', '0'),
-(17, 'Otho', 'Schroeder', 'rturner@hotmail.com', '$2y$10$gZW0JDgD6FdNLM2V4NgZTeR1.D.7PIxkz8BbFm3ZxK7g.4xc.UMkW', 'user', '1695479894', '0', '0'),
-(18, 'Brigitte', 'Bergnaum', 'waelchi.reina@gmail.com', '$2y$10$9OzpoL5ey4UFxvjYf5SdPeAobnf73s3qy9a.JvXip7o2v75i4eB5G', 'user', '1695479894', '0', '0'),
-(19, 'Nick', 'Koelpin', 'glittle@collins.com', '$2y$10$HLbh7LrOz5KkdK8GW5xBsuSKTHXWseolcvdrU9QkykW07ihAjbV4W', 'user', '1695479894', '0', '0'),
-(20, 'Leta', 'McGlynn', 'zulauf.retta@schneider.com', '$2y$10$eb4LMpN0QDrJYZ2gMUIsA.X/nrlZfJIIK6yehtMJmXWmY/8OzNbIi', 'user', '1695479894', '0', '0'),
-(21, 'Damien', 'Funk', 'wyman.jace@yahoo.com', '$2y$10$68CXIp5sKp68JmJiEKtiseTJvTS377vpHDpnD6nYscsJPIGWo5gxa', 'user', '1695479919', '0', '0'),
-(22, 'Logan', 'Christiansen', 'shanahan.raven@gmail.com', '$2y$10$mdQ4HrJh99BjjKvGflN81ucwCZ1yFIum76hHP0did7lZewGD75oZK', 'user', '1695479919', '0', '0'),
-(23, 'Elbert', 'Moore', 'wilfred.kub@yahoo.com', '$2y$10$pyuDiK6psc2ddRzTDt6S5OSyNVYDXrXwGGU7oVZMSZaK0iq0x.tEy', 'user', '1695479920', '0', '0'),
-(24, 'Xander', 'Steuber', 'korn@gmail.com', '$2y$10$E3pka/BDWpbTaYgMTDD/n.a1scgqYlfWlQn69NIn3YpcfOnqbD7He', 'user', '1695479920', '0', '0'),
-(25, 'Sienna', 'Hahn', 'verna84@gmail.com', '$2y$10$yMpYtZyqReq2stSnMi.SUe4LxfTQupZlFrib.RQyJUJtmy35VuDlK', 'user', '1695479920', '0', '0'),
-(26, 'Demond', 'Cremin', 'rozella.bartoletti@gmail.com', '$2y$10$6FOyJBx1nzLFH2NtOYNLIOtNXG3oZQCic5TKNXxu14l/TK7qnf3jS', 'user', '1695479920', '0', '0'),
-(27, 'Lukas', 'Bednar', 'halvorson.dashawn@jenkins.info', '$2y$10$sQa2KYIc42xpL9K3/CX4iOKaM30/6dmKodPy2hcj7ujkLm4ZJrggi', 'user', '1695479920', '0', '0'),
-(28, 'Edwardo', 'Corkery', 'gtillman@gmail.com', '$2y$10$NxJIeze/svrZu97MM4z6p.fY020FTbeBo2E4.SPkSIB4wwH8EtXS.', 'user', '1695479920', '0', '0'),
-(29, 'Elfrieda', 'Considine', 'philip86@gmail.com', '$2y$10$jjLoXuUFthkc0.qQKoJ1Feoz.gfmTfVtSZ9p8Cmw40cVoXKwPAfVC', 'user', '1695479920', '0', '0'),
-(30, 'Scarlett', 'Friesen', 'morar.florida@gmail.com', '$2y$10$xxLfGjAhAeyrn0wNu7J7aejSDTH4Vd.wBT3lNtodEhfcxFeNX4FAa', 'user', '1695479920', '0', '0');
+INSERT INTO `users` (`user_id`, `user_name`, `user_last_name`, `user_email`, `user_address`, `user_password`, `user_role`, `user_created_at`, `user_updated_at`, `user_deleted_at`, `user_is_blocked`) VALUES
+(1, 'Arnoldo', 'Kertzmann', 'jaquelin.okon@yahoo.com', '5878 Breitenberg Harbors Apt. 994\nOsinskiport, NV 15520-3842', '$2y$10$niBwI6rmBlwfxDTGinQQBecZWP/DRdV/xTET8bXcvPlBQ315t0heG', 'user', '1695809360', '0', '0', 0),
+(2, 'Lonnie', 'Roberts', 'swift.laney@hotmail.com', '10871 Bernhard Villages Suite 402\nLake Kaciemouth, CT 44635-7285', '$2y$10$MGkI.9aDaAOPcQTj2kVzV./U139OrNqLucEbrxUPsE6stjNH98lvS', 'user', '1695809360', '0', '0', 0),
+(3, 'Kelli', 'Miller', 'klynch@yahoo.com', '69285 Letha Lights Apt. 989\nJonesberg, LA 23657', '$2y$10$WoJhmZMwSQ7e3jWg0OXH4.VNqCFjS7Zdre72LVrTjcT7B6JGoSf2u', 'user', '1695809360', '0', '0', 1),
+(4, 'Fermin', 'Wiza', 'junius.luettgen@hegmann.biz', '9066 Boyle Neck\nDeanview, OR 62471', '$2y$10$4gRb08AK3vjDCU5kLct6Buw96roxcT39Cx9GJTaOa7RhqQCsawHWm', 'user', '1695809360', '0', '0', 0),
+(5, 'Adelbert', 'Mayert', 'ifeest@yahoo.com', '9086 Price Gateway\nWest Demario, SC 21783', '$2y$10$p.kyrMAsZJAXd466Z64uZ.c00Jpu4/mWTKSadr8SNFrZrIu0YTk8S', 'user', '1695809360', '0', '0', 1),
+(6, 'Bethany', 'Haag', 'michaela.halvorson@bartoletti.biz', '235 Rodriguez Inlet\nScarlettberg, DE 61122-7121', '$2y$10$pygJEJM.yT7b2bjMSxeJo.BP5IreggEtD6ZwJs6k8dxJfen8jdrJC', 'user', '1695809360', '0', '0', 0),
+(7, 'Brionna', 'Ankunding', 'retha43@yundt.com', '84436 Rafael Ford Apt. 578\nWest Turnerhaven, MO 93861', '$2y$10$QXk5UQ5nKiqqQ3ll/aVSt.2g.wOISy0JaGcG9zprEXKE3SBGEzbfu', 'user', '1695809360', '0', '0', 1),
+(8, 'Makayla', 'Schulist', 'jett.russel@lesch.info', '835 Stacey Hill Suite 044\nPort Ella, TX 54582-9162', '$2y$10$VLvs7v2zOtfpT4VsH7WiS.zU6qv5Y7u6CkTrEFjzL7dO3701KOyuW', 'user', '1695809360', '0', '0', 0),
+(9, 'Darren', 'Brown', 'courtney.marquardt@bruen.com', '2212 Hilpert Corner\nSheldonton, OK 60262-1009', '$2y$10$FDKgqJCJfTk9thEsBOJgKOxlMg5y6impU/vbKM0AXGm9zKLHviP/i', 'user', '1695809360', '0', '0', 1),
+(10, 'Elizabeth', 'Veum', 'homenick.dayne@kirlin.net', '877 Jerde Field\nBonitaton, TX 11184', '$2y$10$15/XcXOQtMTVHhH4jxXxf.MItK1dUe0Z6cSHSmduB9TXf7gR.Gws6', 'user', '1695809360', '0', '0', 0);
 
 --
 -- Indexes for dumped tables
@@ -93,7 +75,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `user_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
