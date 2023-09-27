@@ -34,6 +34,16 @@ function toogle_menu(){
 }
 
 
+function toggle_language(){
+  console.log("x")
+  if( document.querySelector("#box_languages").classList.contains("hidden") ){
+    console.log("the box hidden")
+    document.querySelector("#box_languages").classList.remove("hidden")
+    return
+  }
+  document.querySelector("#box_languages").classList.add("hidden")
+}
+
 
 
 
