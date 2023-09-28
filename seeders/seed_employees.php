@@ -8,7 +8,7 @@ $faker = Faker\Factory::create();
 $db = _db();
 $q = $db->prepare('SELECT user_id FROM users ORDER BY RAND() LIMIT 2');
 $q->execute();
-$ids = $q->fetchAll();
+$ids = $q->fetchAll(PDO::FETCH_COLUMN);
 echo json_encode($ids);
 
 
