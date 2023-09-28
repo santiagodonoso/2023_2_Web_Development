@@ -44,6 +44,20 @@ Insert the snippet
 ##############################
 ##############################
 
+Compound key
+2 or more foreign keys
+fk+fk
+fk+fk+fk+fk
+
+
+
+Composite key
+Combination of 2 or more columns that are not all foreign keys
+fk+varchar
+varchar+varchar
+fk+char+int+varchar
+fk+int
+
 
 
 
