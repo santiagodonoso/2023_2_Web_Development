@@ -1,5 +1,22 @@
 <?php
 
+require_once __DIR__ . '/../_.php';
+require_once __DIR__ . '/Faker/src/autoload.php';
+
+$faker = Faker\Factory::create();
+
+$db = _db();
+$q = $db->prepare('SELECT user_id FROM users ORDER BY RAND() LIMIT 2');
+$q->execute();
+$ids = $q->fetchAll();
+echo $ids;
+
+
+exit();
+
+
+
+
 // $ids = [5,6,7,8,9,10]; // Pool
 // $ids = ["a","b","c","d","e","f","g"]; // Pool
 // $array_length = count($ids);
