@@ -46,8 +46,6 @@ Insert the snippet
 
 Compound key
 2 or more foreign keys
-fk+fk
-fk+fk+fk+fk
 
 
 

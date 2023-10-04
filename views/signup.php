@@ -34,7 +34,7 @@ require_once __DIR__.'/_header.php';
       <label for="">
       <span class="font-bold text-pink-500">email</span> 
       </label>    
-      <input name="user_email" type="text" 
+      <input name="user_email" type="text" onblur="is_email_available()"
       data-validate="email">
     </div>
 

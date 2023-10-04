@@ -1,3 +1,18 @@
+// ##############################
+async function is_email_available(){
+  const frm = event.target.form
+  const conn = await fetch("api/api-is-email-available.php", {
+    method: "POST",
+    body: new FormData(frm)
+  })
+  if( ! conn.ok ){ // everything that is not a 2xx
+    console.log("email not available")
+    return
+  }
+  console.log("email available")
+}
+
+
 
 // ##############################
 async function delete_user(){
