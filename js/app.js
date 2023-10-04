@@ -1,7 +1,8 @@
 
 // ##############################
-function delete_user(){
-  alert()
+async function delete_user(){
+  const frm = event.target
+  console.log(frm)
 }
 
 
