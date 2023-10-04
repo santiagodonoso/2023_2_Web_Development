@@ -31,7 +31,7 @@ $users = $sql->fetchAll();
       </button>
 
       <form onsubmit="delete_user(); return false">
-        <input name="user_id" type="text" value="<?= $user['user_id'] ?>">
+        <input class="hidden" name="user_id" type="text" value="<?= $user['user_id'] ?>">
         <button class="w-1/5">
           🗑️
         </button>

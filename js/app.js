@@ -9,6 +9,7 @@ async function delete_user(){
   })
   const response = await conn.json()
   console.log(response)
+  frm.parentElement.remove()
 }
 
 
