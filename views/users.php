@@ -30,7 +30,7 @@ $users = $sql->fetchAll();
         <?= $user['user_is_blocked'] == 0 ? "unblocked" : "blocked" ?>
       </button>
 
-      <form onsubmit="return false">
+      <form onsubmit="delete_user(); return false">
         <input name="user_id" type="text" value="<?= $user['user_id'] ?>">
         <button class="w-1/5">
           🗑️

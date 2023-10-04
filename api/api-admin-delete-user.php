@@ -6,7 +6,12 @@ try{
   // Validate user_id
   $user_id = $_POST['user_id'];
 
-  echo json_encode(['info'=>'ok']);
+  $db = _db();
+  $sql = $db->prepare('DELETE FROM users WHERE user_id = :user_id');
+  $sql->bindValue(':user_id', $user_id); 
+  $sql->execute();
+
+  echo json_encode(['info'=>"user deleted with id: $user_id"]);
 
 }catch(Exception $e){
     $status_code = !ctype_digit($e->getCode()) ? 500 : $e->getCode();
