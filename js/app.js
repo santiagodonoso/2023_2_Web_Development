@@ -1,3 +1,11 @@
+
+// ##############################
+function delete_user(){
+
+}
+
+
+// ##############################
 async function toggle_blocked(user_id, user_is_blocked){
 
   console.log("user_id", user_id)
@@ -14,8 +22,6 @@ async function toggle_blocked(user_id, user_is_blocked){
     `api/api-toggle-user-blocked.php?user_id=${user_id}&user_is_blocked=${user_is_blocked}`)
   const data = await conn.text()
   console.log(data)
-
-
 }
 
 

@@ -25,10 +25,20 @@ $users = $sql->fetchAll();
       <div class="w-1/5"><?= $user['user_last_name'] ?></div>
       <div class="w-1/5"><?= $user['user_email'] ?></div>
       <div class="w-1/5"><?= $user['user_address'] ?></div>
-      <button class="ml-auto" 
+      <button class="w-1/5"
         onclick="toggle_blocked(<?= $user['user_id'] ?>,<?= $user['user_is_blocked'] ?>)">
         <?= $user['user_is_blocked'] == 0 ? "unblocked" : "blocked" ?>
       </button>
+
+      <form onsubmit="return false">
+        <input name="user_id" type="text" value="<?= $user['user_id'] ?>">
+        <button class="w-1/5">
+          🗑️
+        </button>
+      </form>
+
+
+
     </div>
   <?php endforeach?>
 </main>
