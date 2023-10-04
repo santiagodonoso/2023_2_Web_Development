@@ -24,7 +24,7 @@ $users = $sql->fetchAll();
       <div class="w-1/5"><?= $user['user_name'] ?></div>
       <div class="w-1/5"><?= $user['user_last_name'] ?></div>
       
-      <a href="/user">
+      <a href="/user?user_id=<?= $user['user_id'] ?>">
         👁️
       </a>
 
