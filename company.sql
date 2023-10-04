@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 04, 2023 at 09:21 AM
+-- Generation Time: Oct 04, 2023 at 09:35 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -37,10 +37,6 @@ CREATE TABLE `employees` (
 --
 
 INSERT INTO `employees` (`user_employee_fk`, `employee_salaray`) VALUES
-(13, 78184),
-(14, 82523),
-(16, 68187),
-(20, 55457),
 (45, 19656),
 (48, 88317);
 
@@ -54,13 +50,6 @@ CREATE TABLE `partners` (
   `user_partner_fk` bigint(20) UNSIGNED NOT NULL,
   `partner_geo` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `partners`
---
-
-INSERT INTO `partners` (`user_partner_fk`, `partner_geo`) VALUES
-(20, '89.302753,-149.385902');
 
 -- --------------------------------------------------------
 
@@ -120,16 +109,6 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `user_name`, `user_last_name`, `user_email`, `user_address`, `user_password`, `user_role`, `user_created_at`, `user_updated_at`, `user_deleted_at`, `user_is_blocked`) VALUES
-(13, 'Demario', 'Schultz', 'muhammad66@gmail.com', '9167 Elna Street Suite 388\nNew Erikville, GA 79567', '$2y$10$tHKt3Tfyrvmwy6YilXkobuqVNC.8biY/kRMnJvXzWvjZCug6qFOfy', 'user', '1695900118', '0', '0', 0),
-(14, 'Lily', 'Wunsch', 'ahills@gmail.com', '869 Douglas Vista\nEast Joelleside, DC 36253', '$2y$10$JmlXIPQb8Zr4uDdqDWeY6OXhG44uBG/tkQH09ToTq8FnHfIzeK2l.', 'user', '1695900118', '0', '0', 1),
-(15, 'Marguerite', 'Strosin', 'mariana18@pacocha.com', '780 Isabelle Lakes Suite 636\nNettieview, ND 73933', '$2y$10$zqiitHkn77VPI1jXRKrWUOA.rgrwVhUPZjh17JYTR8Ec02xPhARJS', 'user', '1695900118', '0', '0', 0),
-(16, 'Tyrese', 'Hill', 'anthony.breitenberg@kiehn.com', '7526 Desmond Avenue\nMartymouth, SD 14325', '$2y$10$aHlxv3/xwiYRaEBv4rlOXeOpiEJwFkmUNLdYPsStj/MZouX4xIHOi', 'user', '1695900118', '0', '0', 1),
-(17, 'Dorcas', 'Jacobi', 'wolf.brielle@orn.com', '9983 King Mission Apt. 492\nWest Fabianfurt, OK 05148', '$2y$10$hraG2pBKr6ij3NRj5RXo9OHovBpuAwFSUnZyXKGqd1PULS77EBM0e', 'user', '1695900118', '0', '0', 1),
-(18, 'Geovanni', 'Sipes', 'ortiz.dedrick@hotmail.com', '5024 Shaniya Avenue Apt. 275\nGreenholtchester, PA 50146-7391', '$2y$10$dBGfQX7z/P/9/tvaoB9kIOhxt63mY9pOPUij5RnQ4VPJp9atSFVSu', 'user', '1695900118', '0', '0', 0),
-(20, 'Lenna', 'Crona', 'ratke.chanelle@hotmail.com', '84750 Gusikowski Plaza Suite 641\nNorth Trinityland, WA 05864-1189', '$2y$10$hQl8MRfdgVn8RgZ20/roBuMDtMficfKUSoS5fBKIyu6CQzi6h9dli', 'user', '1695900118', '0', '0', 1),
-(21, 'Jimmy', 'Vandervort', 'marlen.hickle@mohr.org', '439 Green Knolls\nNew Archtown, NE 38275', '$2y$10$UCG.TJ01Lzf8h0P9q3DbeObkx.3O53ZUwBFYu7HySjfxkr1XrCIHe', 'user', '1695900248', '0', '0', 0),
-(22, 'Stefan', 'Stracke', 'hhuels@gerhold.com', '55110 White Loaf\nNew Palmafort, TX 36467-7169', '$2y$10$ZB.qxLsfQpD8USjlH2lZs.mjBgyoe0Zmsh95KpQFCHtYVDfYt0wdm', 'user', '1695900248', '0', '0', 1),
-(23, 'Elijah', 'Schowalter', 'rolfson.rowan@mccullough.com', '3439 Brown Camp\nKuhlmanfort, WY 71918', '$2y$10$w.CH3NqwXY6eVojQebKZteW8n.FysGHQZEfR1GstqYtZ4lo3R1vAe', 'user', '1695900248', '0', '0', 1),
 (24, 'Rodger', 'Schuppe', 'margot.okuneva@yahoo.com', '532 Jaiden Brook\nPort Winfield, KS 08795', '$2y$10$vV.hALE5VIj.JKoUwKGnOOzjqp9O/espd6flqq.T7nSIiDjKiMEMm', 'user', '1695900248', '0', '0', 1),
 (25, 'Bailee', 'Stiedemann', 'shanie75@heidenreich.net', '441 Shany Mountains\nWeissnatfort, MO 10900', '$2y$10$n.qj/8zAyBbZKnpd.Y2gIufXr9.ENOVkhNs1HKs72t7t0/WGxwO.y', 'user', '1695900248', '0', '0', 0),
 (26, 'Micah', 'Hirthe', 'stanford64@yahoo.com', '8175 Hills Bridge\nCarlieland, OR 99114', '$2y$10$TH7mnX1Ti/fKZJWMam4mluZGh5yxoh/tjEeXrGHLoQLxB4t0vnJHC', 'user', '1695900248', '0', '0', 0),
@@ -156,7 +135,17 @@ INSERT INTO `users` (`user_id`, `user_name`, `user_last_name`, `user_email`, `us
 (47, 'Ted', 'Torp', 'leffler.sydney@gmail.com', '716 Fisher Estates Apt. 515\nLittlefort, AK 69596', '$2y$10$vgYtneBdnVRU7omFMw/xDemDxjPcPWXys6jDXLb.j07hmBcigfY2.', 'user', '1695900346', '0', '0', 1),
 (48, 'Camden', 'King', 'abernathy.helene@yahoo.com', '5760 Kasey Isle Suite 455\nAufderharport, ND 02909-8471', '$2y$10$0J3CAwIsdZprWEETYxiRB.60DB.FyhvxiURvpokR6Pfc43b4pk04C', 'user', '1695900346', '0', '0', 1),
 (49, 'David', 'Howe', 'xstoltenberg@williamson.com', '486 Mitchell Corner Suite 812\nKuphalland, UT 96702-2971', '$2y$10$rMjT3oNrEJs5YNI6isE2ZelyZhTnOoDQm7THOQBBvK4yv/vJjvpiG', 'user', '1695900347', '0', '0', 1),
-(50, 'Ellen', 'Dooley', 'crowe@hotmail.com', '68137 Olson Stravenue\nWest Kyleigh, RI 22424-9988', '$2y$10$KzJWjV0lDQRhWYR5OTB7/OflaGUfXb94AM2ab2j3ekwnX52jTHwPC', 'user', '1695900347', '0', '0', 0);
+(50, 'Ellen', 'Dooley', 'crowe@hotmail.com', '68137 Olson Stravenue\nWest Kyleigh, RI 22424-9988', '$2y$10$KzJWjV0lDQRhWYR5OTB7/OflaGUfXb94AM2ab2j3ekwnX52jTHwPC', 'user', '1695900347', '0', '0', 0),
+(51, 'Terence', 'Gerlach', 'aaron.carter@ortiz.com', '3965 Stephon Hill\nJasperbury, IA 83586-4950', '$2y$10$bbgbDKxKN4A/tZo2jVaubuBPhXuUHqpF684zBneS3rBpC0hvzu2Hq', 'user', '1696404905', '0', '0', 1),
+(52, 'Myles', 'Okuneva', 'steuber.vivian@emard.com', '3347 Edmond Falls\nEast Gwen, NY 50381', '$2y$10$BXTI3RX0XIjBWhsBKextLed/SRbcOB6eiGahGbQ.SDbeiUW4szcX.', 'user', '1696404905', '0', '0', 0),
+(53, 'Chesley', 'Simonis', 'mckenzie51@hotmail.com', '90398 Kuhlman Cliff\nMargieview, AL 72024', '$2y$10$zocAqpSxl0JpdyWv8ekOa.Wg/lXp6E5/F0WjVVox2p0lYVH0hkIbm', 'user', '1696404905', '0', '0', 1),
+(54, 'Harley', 'Hermiston', 'pearl87@gmail.com', '39146 Melody Views Suite 470\nSouth Marielle, IA 51954-9233', '$2y$10$daoafDk349eO1kbridVaLuH46hoIK8T6aPFwccIOKxPRmdtdo7b46', 'user', '1696404905', '0', '0', 1),
+(55, 'Alvina', 'Mertz', 'okon.courtney@wehner.net', '590 Cole Tunnel\nDooleyshire, TN 72961', '$2y$10$luiH4/0yQhjcZdggV/wLIOi9GnaS0G6.9oJuh7gpV17k/J9xgKqwC', 'user', '1696404906', '0', '0', 0),
+(56, 'Cleta', 'Morissette', 'blanda.soledad@yahoo.com', '880 Damaris Meadows Suite 193\nSouth Julien, NY 60287-4512', '$2y$10$ac3ap7rAJmk7saUulCIU5.UngfC.tBqgny9HdDV5NRVRNziC.xkMC', 'user', '1696404906', '0', '0', 1),
+(57, 'Aracely', 'Koepp', 'jamil.wisozk@hotmail.com', '46051 Archibald Crest\nDeltachester, ME 85049', '$2y$10$y6e585HheeSkHfnC2tNDJOXQEp47.nssF5MM0WXpm02hgkSZ2giCG', 'user', '1696404906', '0', '0', 0),
+(58, 'Annabelle', 'Shields', 'vbahringer@gmail.com', '4150 Dewitt Grove\nWest Faefurt, OK 75920-4088', '$2y$10$DcDJxb1MhrHC6UOJdgfLauCzqRfu2BirlU6PmVFnQhPDS.Lsq/3Ba', 'user', '1696404906', '0', '0', 0),
+(59, 'Brandyn', 'Feeney', 'lsipes@yahoo.com', '416 Schultz Vista\nMaryberg, WY 36323', '$2y$10$Muq/GJyTQ6vtzYSAsrELeu.dvFwXgrg8LARALygwfcVVBQLVimLYy', 'user', '1696404906', '0', '0', 0),
+(60, 'Rickey', 'Simonis', 'fpouros@hotmail.com', '834 Nelson Isle\nPort Daniela, CA 76738-0382', '$2y$10$8PHRO9Z/UThPKr/3KG84mupPt.5e8faEUmPPngAoIUmKOgv5c3Tf2', 'user', '1696404906', '0', '0', 0);
 
 --
 -- Indexes for dumped tables
@@ -201,7 +190,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `user_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- Constraints for dumped tables
