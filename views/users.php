@@ -23,8 +23,11 @@ $users = $sql->fetchAll();
       <div class="w-1/12"><?= $user['user_id'] ?></div>
       <div class="w-1/5"><?= $user['user_name'] ?></div>
       <div class="w-1/5"><?= $user['user_last_name'] ?></div>
-      <div class="w-1/5"><?= $user['user_email'] ?></div>
-      <div class="w-1/5"><?= $user['user_address'] ?></div>
+      
+      <a href="/user">
+        👁️
+      </a>
+
       <button class="w-1/5"
         onclick="toggle_blocked(<?= $user['user_id'] ?>,<?= $user['user_is_blocked'] ?>)">
         <?= $user['user_is_blocked'] == 0 ? "unblocked" : "blocked" ?>

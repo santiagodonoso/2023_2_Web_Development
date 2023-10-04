@@ -113,5 +113,3 @@ function _validate_user_confirm_password(){
 
 
 
-
-
