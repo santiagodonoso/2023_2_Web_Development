@@ -3,6 +3,8 @@ header('Content-Type: application/json');
 require_once __DIR__.'/../_.php';
 try{
   // Validate
+  _validate_user_email();
+  
   $user_email = $_POST['user_email'];
   $db = _db();
   $sql = $db->prepare(' SELECT user_email 

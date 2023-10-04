@@ -16,7 +16,7 @@
 
 <body oncontextmenu="toogle_menu(); return false" 
 class="w-full h-screen text-base text-gray-900 font-roboto font-light bg-gray-300 
-dark:bg-zinc-700 dark:text-zinc-300">
+dark:bg-zinc-700 dark:text-black">
 
 
 <div id="menu" class="fixed flex top-0 -left-60 h-screen z-10 duration-500">

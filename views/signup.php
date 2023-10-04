@@ -34,8 +34,13 @@ require_once __DIR__.'/_header.php';
       <label for="">
       <span class="font-bold text-pink-500">email</span> 
       </label>    
-      <input name="user_email" type="text" onblur="is_email_available()"
+      <input name="user_email" type="text" 
+      onblur="is_email_available()"
+      onfocus='document.querySelector("#msg_email_not_available").classList.add("hidden")'
       data-validate="email">
+      <div id="msg_email_not_available" class="hidden">
+        Email is not available
+      </div>
     </div>
 
     <div class="grid" class="flex">
