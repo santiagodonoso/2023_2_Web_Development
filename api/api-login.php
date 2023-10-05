@@ -6,10 +6,9 @@ try{
   _validate_user_password();
 
   $db = _db();
-  $q = $db->prepare('
-    SELECT * FROM users
-    WHERE user_email = :user_email
-  ');
+  // $q = $db->prepare('SELECT * FROM users WHERE user_email = :user_email');
+  // $q = $db->prepare('SELECT * FROM users WHERE user_email = $_POST['user_email]');
+  $q = $db->prepare('CALL login(:user_email)');
   $q->bindValue(':user_email', $_POST['user_email']);
   $q->execute();
   $user = $q->fetch();

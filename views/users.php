@@ -2,7 +2,8 @@
 require_once __DIR__.'/_header.php';
 require_once __DIR__.'/../_.php';
 $db = _db();
-$sql = $db->prepare('SELECT * FROM users');
+// $sql = $db->prepare('SELECT * FROM users');
+$sql = $db->prepare('CALL get_all_users()');
 $sql->execute();
 $users = $sql->fetchAll();
 ?>
