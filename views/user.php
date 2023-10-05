@@ -4,7 +4,8 @@ $user_id = $_GET['user_id'];
 
 // TODO: _validate_user_id() in the master file
 $db = _db();
-$q = $db->prepare('SELECT * FROM users WHERE user_id = :user_id');
+// $q = $db->prepare('SELECT * FROM users WHERE user_id = :user_id');
+$q = $db->prepare('');
 $q->bindValue(':user_id', $_GET['user_id']);
 $q->execute();
 $user = $q->fetch();
