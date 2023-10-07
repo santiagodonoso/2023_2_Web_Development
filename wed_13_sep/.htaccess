@@ -1,0 +1,11 @@
+RewriteEngine On
+
+RewriteRule ^$                  views/index.php [NC,L]
+RewriteRule ^contact-us$        views/contact-us.php [NC,L]
+RewriteRule ^signup$            views/signup.php [NC,L]
+RewriteRule ^login$             views/login.php [NC,L]
+RewriteRule ^products$          views/products.php [NC,L]
+
+# API
+
+RewriteRule ^api/products/(.*)$   api/api_get_product.php?id=$1 [NC,L]
