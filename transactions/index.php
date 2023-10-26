@@ -5,12 +5,23 @@ try{
   $db = _db();
   $db->beginTransaction();
   $transfer = 5;
+  // Take 5 from A
   $q = $db->prepare(' UPDATE users 
                       SET user_balance = user_balance - :transfer
                       WHERE user_id = 1
                   ');
   $q->bindValue(':transfer', $transfer);
   $q->execute();
+  
+  // Add 5 to B
+  $q = $db->prepare(' UPDATE users 
+                      SET user_balance = user_balance + :transfer
+                      WHERE user_id = 2
+                  ');
+  $q->bindValue(':transfer', $transfer);
+  $q->execute(); 
+  
+  
   $db->commit();
   echo 'Transfer OK';
 }catch(Exception $ex){
