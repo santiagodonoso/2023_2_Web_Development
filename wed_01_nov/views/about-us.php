@@ -1,3 +1,3 @@
-<main id="about-us">
+<main id="about-us" class="page">
   About us
 </main>

@@ -17,8 +17,27 @@
   </div>
 </div>
 
-<nav class="fixed top-0 left-0 w-52 h-screen bg-slate-700">
+<nav class="fixed top-0 left-0 flex flex-col gap-4 
+p-4 w-52 h-screen bg-slate-700">
 
+  <a href="/profile" onclick="show_page('profile'); return false">
+    Profile
+  </a>
 
+  <a href="/contact-us" onclick="show_page('contact-us'); return false">
+    Contact us
+  </a>
+
+  <a href="/about-us" onclick="show_page('about-us'); return false">
+    About us
+  </a>  
+
+  <a href="/notifications" onclick="show_page('notifications'); return false">
+    Notifications <span id="counter">0</span>
+  </a>    
+
+  <a href="/logout" onclick="return false" class="mt-auto">
+    Logout
+  </a>    
 
 </nav>

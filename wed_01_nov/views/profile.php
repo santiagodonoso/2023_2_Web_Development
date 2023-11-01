@@ -1,3 +1,3 @@
-<main id="profile" class="overflow-y-scroll h-full">
+<main id="profile" class="page">
   Profile
 </main>
