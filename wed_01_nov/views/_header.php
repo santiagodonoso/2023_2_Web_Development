@@ -12,7 +12,7 @@
 
 <div class="fixed flex top-0 left-0 w-full">
   <div id="toast" 
-  class="hidden mt-4 px-8 py-2 mx-auto text-white bg-purple-600 rounded-full">
+  class="hidden mt-4 px-8 py-2 mx-auto text-white rounded-full transition-all">
     Toast
   </div>
 </div>
